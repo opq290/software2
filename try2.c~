@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <unistd.h>
+#include<string.h>
+int full[3][2][2]={{{2,2},{1,1}},{{3,3},{4,4}},{{5,5},{6,6}}};
+
+int compare(int k){
+  int i;
+  for (i = 0; i < k; i++){
+   
+    if (memcmp(full[i],full[k],2)==0){
+      return -1;
+      break;
+     }
+  }
+  return 0;
+}
+main(){
+  if (memcmp(full[1],full[2],2) == 0){
+    printf("jsdhakd\n");
+  }
+}
